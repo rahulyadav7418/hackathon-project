@@ -30,7 +30,7 @@ async function main() {
 
 
 app.get("/offers", async(req, res) => {
-    let offers = await Offer.find();
+    let offers = [];
     res.render("offers.ejs", { offers });
 })
 
@@ -61,7 +61,7 @@ app.put("/offers/:id", async(req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.send("Server Working");
+    res.render("offers");
 });
 
 app.listen(8080, () => {
