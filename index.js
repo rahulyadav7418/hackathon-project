@@ -30,7 +30,7 @@ async function main() {
 
 
 app.get("/offers", async(req, res) => {
-    let offers = [];
+    let offers = await Offer.find();
     res.render("offers.ejs", { offers });
 })
 
