@@ -14,7 +14,7 @@ app.use(methodOverride("_method"));
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect("mongodb+srv://yadavrahul36296_db_user:RahulYadav@2026@cluster0.1yfnh8q.mongodb.net/?appName=Cluster0")
+  await mongoose.connect("mongodb+srv://yadavrahul36296_db_user:Rahul12345@cluster0.1yfnh8q.mongodb.net/?appName=Cluster0")
 }
 
 // app.get("/create", async(req, res) => {
