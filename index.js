@@ -61,7 +61,7 @@ app.put("/offers/:id", async(req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.send("offers.ejs");
+    res.render("offers.ejs");
 });
 
 app.listen(8080, () => {
