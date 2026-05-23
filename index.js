@@ -63,7 +63,7 @@ app.put("/offers/:id", async(req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.send("offers");
+    res.redirect("/offers");
 });
 
 app.listen(8080, () => {
