@@ -4,7 +4,6 @@ const mongoose = require("mongoose");
 const path = require("path");
 const Offer = require("./models/offer");
 const methodOverride = require("method-override");
-
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static("public"));
@@ -15,7 +14,7 @@ app.use(methodOverride("_method"));
 main().catch(err => console.log(err));
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/offerBookingDB');
+  await mongoose.connect("mongodb+srv://yadavrahul36296_db_user:RahulYadav@2026@cluster0.1yfnh8q.mongodb.net/?appName=Cluster0")
 }
 
 // app.get("/create", async(req, res) => {
@@ -66,7 +65,6 @@ app.get("/", (req, res) => {
     res.redirect("/offers");
 });
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => {
+app.listen(8080, () => {
     console.log("Server is listioning on port 8080");
 });
