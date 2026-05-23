@@ -61,7 +61,7 @@ app.put("/offers/:id", async(req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.send("Hackathon Working");
+    res.send("offers.ejs");
 });
 
 app.listen(8080, () => {
