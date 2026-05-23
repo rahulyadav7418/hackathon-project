@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offers</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+     <form method="POST" action="/offers">
+        <input type="text" name="title" placeholder="Title">
+        <input type="text" name="description" placeholder="description">
+        <input type="number" placeholder="Original Price" name="originalPrice">
+        <input type="number" placeholder="Offer Price" name="offerPrice">
+        <input type="number" placeholder="Capacity" name="capacity">
+
+        <button>Add Offer</button>
+    </form>
+
+    <h1>All Offers</h1>
+    <% for(offer of offers) { %>
+        <div class="container">
+            <h2><%= offer.title %></h2>
+            <p><%= offer.description %></p>
+            <h3>originalPrice: ₹<%= offer.originalPrice %></h3>
+            <h3 class="offerPrice">offerPrice: ₹<%= offer.offerPrice %></h3>
+            <h3>discount: <%= Math.floor(((offer.originalPrice - offer.offerPrice) / offer.originalPrice) * 100) %>%</h3>
+            <h3>capacity: <%= offer.capacity %></h3>
+
+            <div class="buttons">
+                <a href="/offers/<%= offer._id %>/edit">
+                    <button class="edit">Edit</button>
+                </a>
+
+                <form action="/offers/<%= offer._id %>?_method=DELETE" method="POST">
+                    <button class="delete">Delete</button>
+                </form>
+            </div>
+
+        </div>
+    <% } %>
+</body>
+</html>
