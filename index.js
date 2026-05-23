@@ -61,7 +61,7 @@ app.put("/offers/:id", async(req, res) => {
 });
 
 app.get("/", (req, res) => {
-    res.send("Server working");
+    res.send("offers");
 });
 
 app.listen(8080, () => {
