@@ -19,5 +19,11 @@ A simple full stack web application built using:
 - Database: MongoDB
 - Frontend: EJS, CSS
 
+## Live Demo
+https://hackathon-project-hc4a.onrender.com/offers
+
+## Demo video
+https://drive.google.com/file/d/1IyOaAIHsQm1lQn653DETEqTkeUV4LwFt/view?usp=sharing
+
 ## Author
 Rahul Yadav
